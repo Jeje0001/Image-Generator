@@ -37,8 +37,8 @@ input{
 button{
     padding: 0 40px;
     height: 100%;
-    background: white;
-    color: white;
+    background: #ff3929;
+    color:white;
     font-size: 18px;
     border: 0;
     outline:0;
@@ -47,4 +47,20 @@ button{
     cursor: pointer;
 }
 
-/* continue at 8:10 */
+::placeholder{
+    color: fff;
+    font-size:18px ;
+}
+
+#show-more{
+    background: #ff3929;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 10px auto 100px;
+    cursor: pointer;
+    display: none;
+    
+}
