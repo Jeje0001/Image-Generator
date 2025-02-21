@@ -14,6 +14,9 @@ async function searchimages() {
     const response= await fetch (url);
     const data= await response.json();
 
+    if(page == 1){
+        searchresult.innerHTML=""
+    }
     const result= data.results;
     console.log(result)
     result.map((result)=>{
@@ -26,6 +29,9 @@ async function searchimages() {
         imagelik.appendChild(image);
         searchresult.appendChild(imagelik);
     })
+
+    showmorebutton.style.display="block";
+
     
     
 }
@@ -33,5 +39,10 @@ async function searchimages() {
 searchform.addEventListener("submit",(e)=>{
     e.preventDefault();
     page=1;
+    searchimages();
+})
+
+showmorebutton.addEventListener("click",()=>{
+    page++
     searchimages();
 })
